@@ -12,6 +12,6 @@ class bufcart {
     dateAdded: string;
     quantity: number;
     price: number;
-    productId: number;
+    productid: number;
     productname: string;
 }

@@ -14,7 +14,7 @@ export class ApiService {
   private LOGU_API = "http://localhost:8087/user/verify";
   private LOGA_API = "http://localhost:8087/admin/verify";
   private PRDLST_API = "http://localhost:8087/user/getProducts";
-  private ADD_CART_API = "http://localhost:8087/user/addToCart?productId=";
+  private ADD_CART_API = "http://localhost:8087/user/addToCart?productid=";
   private VW_CART_API = "http://localhost:8087/user/viewCart";
   private UP_CART_API = "http://localhost:8087/user/updateCart";
   private DEL_CART_API = "http://localhost:8087/user/delCart";
