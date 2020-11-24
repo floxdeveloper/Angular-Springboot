@@ -41,8 +41,10 @@ export class ApiService {
   }
   // validating user credentials
   login(user: User): Observable<any> {
-    return this.http.post(this.LOGU_API,
-      JSON.stringify(user),
+    const username = user.username;
+    const password = user.password;
+    return this.http.post(`http://localhost:8087/users/${username}/verify`,
+      password,
       {
         headers:
           { 'Content-Type': 'application/json' }
