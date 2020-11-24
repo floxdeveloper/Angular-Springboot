@@ -11,8 +11,6 @@ import { Address } from '../Model/address';
 })
 export class ApiService {
   private REG_API = "http://localhost:8087/user/signup";
-  private LOGU_API = "http://localhost:8087/user/verify";
-  private LOGA_API = "http://localhost:8087/admin/verify";
   private ADD_CART_API = "http://localhost:8087/user/addToCart?productid=";
   private VW_CART_API = "http://localhost:8087/user/viewCart";
   private UP_CART_API = "http://localhost:8087/user/updateCart";
