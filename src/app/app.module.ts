@@ -58,7 +58,7 @@ const appRoutes:Routes=[
   canActivate:[AuthguardGuard]
 },
 {
-  path:'admin/order',
+  path:'orders',
   component: OrderItemComponent,
   canActivate:[AuthguardGuard]
 }
