@@ -22,7 +22,7 @@ export class ApiService {
   private ADD_PRD_API = "http://localhost:8087/admin/addProduct";
   private DEL_PRD_API = "http://localhost:8087/admin/delProduct";
   private UPD_PRD_API = "http://localhost:8087/admin/updateProducts";
-  private ORD_API = "http://localhost:8087/admin/viewOrders";
+  private ORD_API = "http://localhost:8087/orders";
   private UPD_ORD_API = "http://localhost:8087/admin/updateOrder";
 
   constructor(@Inject(SESSION_STORAGE) private storage: StorageService, private http: HttpClient) {
