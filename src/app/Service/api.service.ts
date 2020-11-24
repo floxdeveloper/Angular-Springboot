@@ -13,7 +13,6 @@ export class ApiService {
   private REG_API = "http://localhost:8087/user/signup";
   private LOGU_API = "http://localhost:8087/user/verify";
   private LOGA_API = "http://localhost:8087/admin/verify";
-  private PRDLST_API = "http://localhost:8087/user/getProducts";
   private ADD_CART_API = "http://localhost:8087/user/addToCart?productid=";
   private VW_CART_API = "http://localhost:8087/user/viewCart";
   private UP_CART_API = "http://localhost:8087/user/updateCart";
@@ -21,6 +20,7 @@ export class ApiService {
   private PLC_ORD_API = "http://localhost:8087/user/placeOrder";
   private ADR_API = "http://localhost:8087/user/addAddress";
   private GT_ADR_API = "http://localhost:8087/user/getAddress";
+  private PRDLST_API = 'http://localhost:8087/products';
   private ADD_PRD_API = "http://localhost:8087/admin/addProduct";
   private DEL_PRD_API = "http://localhost:8087/admin/delProduct";
   private UPD_PRD_API = "http://localhost:8087/admin/updateProducts";
@@ -55,7 +55,7 @@ export class ApiService {
   getProducts(auth: string): Observable<any> {
 
     const myheader = new HttpHeaders().set('AUTH_TOKEN', auth);
-    return this.http.post<any>(this.PRDLST_API, null, { headers: myheader });
+    return this.http.get<any>(this.PRDLST_API, { headers: myheader });
 
   }
 
