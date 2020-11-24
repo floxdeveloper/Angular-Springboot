@@ -40,7 +40,7 @@ export class ApiService {
       });
   }
   // validating user credentials
-  userLogin(user: User): Observable<any> {
+  login(user: User): Observable<any> {
     return this.http.post(this.LOGU_API,
       JSON.stringify(user),
       {
@@ -49,15 +49,6 @@ export class ApiService {
       });
   }
 
-  // validating admin credentials
-  adminLogin(user: User): Observable<any> {
-    return this.http.post(this.LOGA_API,
-      JSON.stringify(user),
-      {
-        headers:
-          { 'Content-Type': 'application/json' }
-      });
-  }
   // Fetching all the products from the database
   getProducts(auth: string): Observable<any> {
 
