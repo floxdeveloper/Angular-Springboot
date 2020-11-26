@@ -53,7 +53,7 @@ const appRoutes:Routes=[
   canActivate:[AuthguardGuard]
 },
 {
-  path:'products/:productId',
+  path:'products/:productid',
   component: EditItemComponent,
   canActivate:[AuthguardGuard]
 },

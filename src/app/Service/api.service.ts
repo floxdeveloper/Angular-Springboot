@@ -145,9 +145,9 @@ export class ApiService {
 
   // update Product for Logged Admin User
   updateProduct(auth: string, desc: string,
-    quan: string, price: string, prodName: string, image: File, productId: any): Observable<any> {
+    quan: string, price: string, prodName: string, image: File, productid: any): Observable<any> {
 
-    const UPD_PRD_API = `http://localhost:8087/products/${productId}`;
+    const UPD_PRD_API = `http://localhost:8087/products/${productid}`;
 
     const formData: FormData = new FormData();
     formData.append('description', desc);
@@ -155,7 +155,7 @@ export class ApiService {
     formData.append('productname', prodName);
     formData.append('quantity', quan);
     formData.append('file', image);
-    formData.append('productid', productId);
+    formData.append('productid', productid);
 
     const myheader = new HttpHeaders().set('AUTH_TOKEN', auth);
     return this.http.put<any>(UPD_PRD_API, formData, { headers: myheader });
