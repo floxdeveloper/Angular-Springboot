@@ -10,7 +10,7 @@ import { Address } from '../Model/address';
   providedIn: 'root'
 })
 export class ApiService {
-  private REG_API = "http://localhost:8087/user/signup";
+  private REG_API = "http://localhost:8087/users/";
   private ADD_CART_API = "http://localhost:8087/user/addToCart?productid=";
   private VW_CART_API = "http://localhost:8087/user/viewCart";
   private UP_CART_API = "http://localhost:8087/user/updateCart";
