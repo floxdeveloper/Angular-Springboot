@@ -24,13 +24,17 @@ export class EditItemComponent implements OnInit {
   prodid: string;
   imageUrl: string = "/assets/img/noimage.png";
 
-  constructor(private route: ActivatedRoute, private api: ApiService) {
+  constructor(private route: ActivatedRoute, private api: ApiService) { }
+
+  ngOnInit() {
+    const productId = +this.route.snapshot.paramMap.get('productId');
+
     if (this.api.isAuthenticated) {
       this.auth = this.api.getToken();
       this.api.getProducts(this.auth).subscribe(
         res => {
           res.oblist.forEach(pro => {
-            if (pro.productid == this.prodid) {
+            if (pro.productid === productId) {
               this.product = pro;
               this.fileToUpload = pro.productimage;
             }
@@ -38,12 +42,6 @@ export class EditItemComponent implements OnInit {
         }
       );
     }
-  }
-
-  ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.prodid = params["user"];
-    });
   }
 
   handleFileInput(file: FileList) {
