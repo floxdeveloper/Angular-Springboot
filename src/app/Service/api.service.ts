@@ -19,7 +19,7 @@ export class ApiService {
   private ADR_API = "http://localhost:8087/user/addAddress";
   private GT_ADR_API = "http://localhost:8087/user/getAddress";
   private PRDLST_API = 'http://localhost:8087/products';
-  private ADD_PRD_API = "http://localhost:8087/admin/addProduct";
+  private ADD_PRD_API = "http://localhost:8087/products";
   private DEL_PRD_API = "http://localhost:8087/admin/delProduct";
   private UPD_PRD_API = "http://localhost:8087/admin/updateProducts";
   private ORD_API = "http://localhost:8087/orders";
