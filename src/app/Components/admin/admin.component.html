@@ -6,8 +6,8 @@
                         <button class="mybtn btn btn-secondary" (click)="hide()" *ngIf="showAdd">Click to hide</button>
                 </div>
         </div>
-        <form class="form-horizontal shadow p-3 mb-5 bg-white rounded " #f="ngForm" (ngSubmit)="f.form.valid && addProd(desc,quan,price,prodname,image)"
-                *ngIf="showAdd">
+        <form class="form-horizontal shadow p-3 mb-5 bg-white rounded " #f="ngForm"
+                (ngSubmit)="f.form.valid && addProd(desc,quan,price,prodname,image)" *ngIf="showAdd">
                 <div class="row">
                         <div class="col-6">
                                 <div class="form-group">
@@ -37,7 +37,7 @@
                                 <img [src]="imageUrl" style="width:400px;height: 300px;">
 
                         </div>
-                        
+
                 </div>
                 <div class="row">
                         <div class="col-6">
@@ -57,7 +57,8 @@
                                         <input type="hidden" value={{product.productid}} #prdid>
                                         <div class="row">
                                                 <div class="col-6">
-                                                        <button class="btn btn-secondary" (click)="edit(prdid)">Edit</button>
+                                                        <a routerLink="/products/{{product.productid}}"><button
+                                                                        class="btn btn-secondary">Edit</button></a>
                                                 </div>
                                                 <div class="col-6">
                                                         <button class="btn btn-danger"
