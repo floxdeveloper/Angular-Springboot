@@ -27,14 +27,14 @@ export class EditItemComponent implements OnInit {
   constructor(private route: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit() {
-    const productId = +this.route.snapshot.paramMap.get('productId');
+    const productid = +this.route.snapshot.paramMap.get('productid');
 
     if (this.api.isAuthenticated) {
       this.auth = this.api.getToken();
       this.api.getProducts(this.auth).subscribe(
         res => {
           res.oblist.forEach(pro => {
-            if (pro.productid === productId) {
+            if (pro.productid === productid) {
               this.product = pro;
               this.fileToUpload = pro.productimage;
             }
