@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/Service/api.service';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/Model/product';
-import { HttpEventType, HttpResponse } from '@angular/common/http';
-import { NavigationExtras, Router } from '@angular/router';
-import { Route } from '@angular/compiler/src/core';
+import { ApiService } from 'src/app/Service/api.service';
 
 @Component({
   selector: 'app-admin',
@@ -52,13 +50,5 @@ export class AdminComponent implements OnInit {
       this.products = res.oblist;
     });
 
-  }
-  edit(prodid) {
-    let navigationExtras: NavigationExtras = {
-      queryParams: {
-        "user": prodid.value
-      }
-    };
-    this.router.navigate(["admin/edit"], navigationExtras);
   }
 }
