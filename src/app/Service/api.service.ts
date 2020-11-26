@@ -1,10 +1,10 @@
-import { Injectable, Inject } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpEvent, HttpRequest } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Inject, Injectable } from '@angular/core';
+import { SESSION_STORAGE, StorageService } from 'angular-webstorage-service';
 import { Observable } from 'rxjs';
+import { Address } from '../Model/address';
 import { Product } from '../Model/product';
 import { User } from '../Model/user';
-import { SESSION_STORAGE, StorageService } from 'angular-webstorage-service';
-import { Address } from '../Model/address';
 
 @Injectable({
   providedIn: 'root'
