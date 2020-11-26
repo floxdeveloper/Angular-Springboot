@@ -10,19 +10,19 @@ import { User } from '../Model/user';
   providedIn: 'root'
 })
 export class ApiService {
-  private REG_API = "http://localhost:8087/users/";
-  private ADD_CART_API = "http://localhost:8087/user/addToCart?productid=";
-  private VW_CART_API = "http://localhost:8087/user/viewCart";
-  private UP_CART_API = "http://localhost:8087/user/updateCart";
-  private DEL_CART_API = "http://localhost:8087/user/delCart";
-  private PLC_ORD_API = "http://localhost:8087/user/placeOrder";
-  private ADR_API = "http://localhost:8087/user/addAddress";
-  private GT_ADR_API = "http://localhost:8087/user/getAddress";
+  private REG_API = 'http://localhost:8087/users/';
+  private ADD_CART_API = 'http://localhost:8087/user/addToCart?productid=';
+  private VW_CART_API = 'http://localhost:8087/user/viewCart';
+  private UP_CART_API = 'http://localhost:8087/user/updateCart';
+  private DEL_CART_API = 'http://localhost:8087/user/delCart';
+  private PLC_ORD_API = 'http://localhost:8087/user/placeOrder';
+  private ADR_API = 'http://localhost:8087/user/addAddress';
+  private GT_ADR_API = 'http://localhost:8087/user/getAddress';
   private PRDLST_API = 'http://localhost:8087/products';
-  private ADD_PRD_API = "http://localhost:8087/products";
-  private DEL_PRD_API = "http://localhost:8087/admin/delProduct";
-  private ORD_API = "http://localhost:8087/orders";
-  private UPD_ORD_API = "http://localhost:8087/admin/updateOrder";
+  private ADD_PRD_API = 'http://localhost:8087/products';
+  private DEL_PRD_API = 'http://localhost:8087/admin/delProduct';
+  private ORD_API = 'http://localhost:8087/orders';
+  private UPD_ORD_API = 'http://localhost:8087/admin/updateOrder';
 
   constructor(@Inject(SESSION_STORAGE) private storage: StorageService, private http: HttpClient) {
 
