@@ -20,7 +20,6 @@ export class ApiService {
   private GT_ADR_API = 'http://localhost:8087/user/getAddress';
   private PRDLST_API = 'http://localhost:8087/products';
   private ADD_PRD_API = 'http://localhost:8087/products';
-  private DEL_PRD_API = 'http://localhost:8087/admin/delProduct';
   private ORD_API = 'http://localhost:8087/orders';
   private UPD_ORD_API = 'http://localhost:8087/admin/updateOrder';
 
@@ -118,9 +117,10 @@ export class ApiService {
   }
 
   // delete Product for Logged Admin User
-  delProduct(auth: string, prodid: number) {
+  delProduct(auth: string, productid: number) {
+    const DEL_PRD_API = `http://localhost:8087/products/${productid}`;
     const myheader = new HttpHeaders().set('AUTH_TOKEN', auth);
-    return this.http.get<any>(this.DEL_PRD_API + "?productid=" + prodid, { headers: myheader })
+    return this.http.delete<any>(DEL_PRD_API, { headers: myheader })
   }
 
   // delete Product for Logged Admin User
@@ -137,11 +137,6 @@ export class ApiService {
     return this.http.post<any>(this.UPD_ORD_API, formData, { headers: myheader })
   }
 
-  // delete Product for Logged Admin User
-  upOrders(auth: string, prodid: number) {
-    const myheader = new HttpHeaders().set('AUTH_TOKEN', auth);
-    return this.http.get<any>(this.DEL_PRD_API + "?productid=" + prodid, { headers: myheader })
-  }
 
   // update Product for Logged Admin User
   updateProduct(auth: string, desc: string,

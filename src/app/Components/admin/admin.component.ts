@@ -44,9 +44,9 @@ export class AdminComponent implements OnInit {
       this.products = res.oblist;
     });
   }
-  delProd(prodid) {
+  delProd(productid) {
 
-    this.api.delProduct(this.auth, prodid.value).subscribe(res => {
+    this.api.delProduct(this.auth, productid.value).subscribe(res => {
       this.products = res.oblist;
     });
 
